@@ -1,6 +1,6 @@
 # Simple Spring Hibernate Application Using Annotations
 
-###Following technologies being used
+Following technologies being used
 
 - Spring 4.0.6.RELEASE
 - Hibernate Core 4.3.6.Final

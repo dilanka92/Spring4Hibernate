@@ -24,7 +24,7 @@ retrieving the records from database and updating or deleting them within `trans
 
 #
 **Create Schema in database**
-<pre>CREATE TABLE EMPLOYEE(
+<pre> CREATE TABLE EMPLOYEE(
     id INT NOT NULL auto_increment, 
     name VARCHAR(50) NOT NULL,
     joining_date DATE NOT NULL,

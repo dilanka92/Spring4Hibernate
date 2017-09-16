@@ -26,7 +26,7 @@ retrieving the records from database and updating or deleting them within `trans
 
 ![alt text][structure]
 
-[structure]: https://lh6.googleusercontent.com/XF8ZTIjvsZfmt_TgHuTY__GTki8m9rEFHIt5GVaMIbF4CX_waFUOdWODxujgNT0SlOcM8QIk9vxMa2g "project structure"
+[structure]: https://image.ibb.co/daEiEQ/project.png "project structure"
 
 ![alt text][test]
 

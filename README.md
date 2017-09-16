@@ -10,7 +10,7 @@ retrieving the records from database and updating or deleting them within `trans
 
 - Spring 4.0.6.RELEASE
 - Hibernate Core 4.3.6.Final
-- validation-api 1.1.0.Final
+- Validation-api 1.1.0.Final
 - Hibernate-validator 5.1.3.Final
 - MySQL Server 5.6
 - Maven 3

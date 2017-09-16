@@ -1,17 +1,19 @@
 package com.dilanka.spring.entities;
 
+import org.joda.time.LocalDate;
+
 import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
-import java.sql.Date;
+import java.math.BigDecimal;
 
 @Entity
 public class Employee {
     private int id;
     private String name;
-    private Date joiningDate;
-    private double salary;
+    private LocalDate joiningDate;
+    private BigDecimal salary;
     private String ssn;
 
     @Id
@@ -36,21 +38,21 @@ public class Employee {
 
     @Basic
     @Column(name = "joining_date", nullable = false)
-    public Date getJoiningDate() {
+    public LocalDate getJoiningDate() {
         return joiningDate;
     }
 
-    public void setJoiningDate(Date joiningDate) {
+    public void setJoiningDate(LocalDate joiningDate) {
         this.joiningDate = joiningDate;
     }
 
     @Basic
     @Column(name = "salary", nullable = false, precision = 0)
-    public double getSalary() {
+    public BigDecimal getSalary() {
         return salary;
     }
 
-    public void setSalary(double salary) {
+    public void setSalary(BigDecimal salary) {
         this.salary = salary;
     }
 
@@ -65,30 +67,36 @@ public class Employee {
     }
 
     @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-
-        Employee employee = (Employee) o;
-
-        if (id != employee.id) return false;
-        if (Double.compare(employee.salary, salary) != 0) return false;
-        if (name != null ? !name.equals(employee.name) : employee.name != null) return false;
-        if (joiningDate != null ? !joiningDate.equals(employee.joiningDate) : employee.joiningDate != null)
+    public boolean equals(Object obj) {
+        if (this == obj)
+            return true;
+        if (obj == null)
             return false;
-        return ssn != null ? ssn.equals(employee.ssn) : employee.ssn == null;
+        if (!(obj instanceof Employee))
+            return false;
+        Employee other = (Employee) obj;
+        if (id != other.id)
+            return false;
+        if (ssn == null) {
+            if (other.ssn != null)
+                return false;
+        } else if (!ssn.equals(other.ssn))
+            return false;
+        return true;
     }
 
     @Override
     public int hashCode() {
-        int result;
-        long temp;
-        result = id;
-        result = 31 * result + (name != null ? name.hashCode() : 0);
-        result = 31 * result + (joiningDate != null ? joiningDate.hashCode() : 0);
-        temp = Double.doubleToLongBits(salary);
-        result = 31 * result + (int) (temp ^ (temp >>> 32));
-        result = 31 * result + (ssn != null ? ssn.hashCode() : 0);
+        final int prime = 31;
+        int result = 1;
+        result = prime * result + id;
+        result = prime * result + ((ssn == null) ? 0 : ssn.hashCode());
         return result;
+    }
+
+    @Override
+    public String toString() {
+        return "Employee [id=" + id + ", name=" + name + ", joiningDate="
+                + joiningDate + ", salary=" + salary + ", ssn=" + ssn + "]";
     }
 }

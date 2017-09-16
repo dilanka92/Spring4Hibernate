@@ -1,6 +1,12 @@
 # Simple Spring Hibernate Application Using Annotations
 
-Following technologies being used
+In this project i have integrate `Spring` with `Hibernate` using annotation based configuration. 
+I have developed a simple CRUD oriented web application containing a form asking user input, saving that input in `MySQL` database using Hibernate, 
+retrieving the records from database and updating or deleting them within `transaction`, all using annotation configuration.
+
+**Testing** I have added unit and integration test using `TestNG`, `mockito`, `spring-test`, `DBUnit` & `H2 database`
+
+**Following technologies being used**
 
 - Spring 4.0.6.RELEASE
 - Hibernate Core 4.3.6.Final

@@ -21,6 +21,12 @@ retrieving the records from database and updating or deleting them within `trans
 - Mockito 1.10.19
 - DBUnit 2.2
 - H2 Database 1.4.187
+#
+**Following is the final project structure**
+
+![alt text][structure]
+
+[structure]: https://lh4.googleusercontent.com/eYZUTbIvHhZ3Vig-nV2UvJpZcpr4zpcYa6ZJB72mASsMXC86BtnYHn37RF2T58Vq7bVf2nzTXfiyyXE "project structure"
 
 #
 **Create Schema in database**

@@ -30,7 +30,7 @@ retrieving the records from database and updating or deleting them within `trans
 
 ![alt text][test]
 
-[test]: https://lh3.googleusercontent.com/EGf7qWpdDzOxCUQzY1EfbMOeELAg9kkjWQWpZKm_8YGT6y6VYwkKmu4gAFmpEtYXdZz-fmS_Tl6Bs_o "test structure"
+[test]: https://image.ibb.co/gmpuM5/test.png "test structure"
 #
 **Create Schema in database**
 <pre> CREATE TABLE EMPLOYEE(
